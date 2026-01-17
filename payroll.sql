@@ -1,0 +1,302 @@
+CREATE DATABASE PAYROLL;
+USE PAYROLL;
+CREATE TABLE EMPLOYEES(
+EMPLOYEE_ID INT PRIMARY KEY,
+NAME  VARCHAR(50),
+DEPARTMENT VARCHAR(50),
+SALARY_PER_DAY DOUBLE,
+JOINING_DATE date
+);
+CREATE TABLE ATTENDENCES(
+ATTENDENCE_ID INT PRIMARY KEY,
+EMPLOYEE_ID INT ,
+MONTH VARCHAR(20),
+DAYS_PRESENT INT,
+foreign key(EMPLOYEE_ID) REFERENCES EMPLOYEES(EMPLOYEE_ID)
+);
+CREATE TABLE SALARY(
+SALARY_ID INT PRIMARY KEY,
+EMPLOYEE_ID INT,
+MONTH VARCHAR(20),
+TOTAL_SALARY DOUBLE, 
+FOREIGN KEY(EMPLOYEE_ID) REFERENCES EMPLOYEES(EMPLOYEE_ID)
+);
+ 
+
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (2, 'Neha', 'HR', 800, '2023-02-15');
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (3, 'Ravi', 'IT', 1200, '2022-11-01');
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (4, 'Priya', 'Finance', 1100, '2023-03-20');
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (5, 'Karan', 'Sales', 950, '2022-12-05');
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (6, 'Anita', 'IT', 1300, '2023-04-12');
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (7, 'Rahul', 'HR', 850, '2023-01-25');
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (8, 'Sneha', 'Finance', 1050, '2022-10-18');
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (9, 'Vikas', 'IT', 1250, '2023-02-08');
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (10, 'Pooja', 'Sales', 980, '2023-03-01');
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (11, 'Arjun', 'HR', 820, '2022-09-14');
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (12, 'Kavita', 'Finance', 1080, '2023-04-05');
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (13, 'Suresh', 'IT', 1400, '2022-08-22');
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (14, 'Meena', 'Sales', 970, '2023-01-30');
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (15, 'Rohit', 'HR', 880, '2023-02-19');
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (16, 'Nisha', 'Finance', 1120, '2022-11-11');
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (17, 'Deepak', 'IT', 1350, '2023-03-18');
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (18, 'Alka', 'Sales', 990, '2022-12-28');
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (19, 'Manoj', 'HR', 860, '2023-04-09');
+
+INSERT INTO employees (employee_id, name, department, salary_per_day, joining_date)
+VALUES (20, 'Isha', 'Finance', 1150, '2023-01-06');
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (1, 1, 'January', 20);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (2, 2, 'January', 18);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (3, 3, 'January', 22);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (4, 4, 'January', 21);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (5, 5, 'January', 16);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (6, 6, 'January', 22);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (7, 7, 'January', 14);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (8, 8, 'January', 19);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (9, 9, 'January', 20);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (10, 10, 'January', 17);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (11, 11, 'January', 15);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (12, 12, 'January', 21);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (13, 13, 'January', 22);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (14, 14, 'January', 18);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (15, 15, 'January', 16);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (16, 16, 'January', 20);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (17, 17, 'January', 22);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (18, 18, 'January', 19);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (19, 19, 'January', 14);
+
+INSERT INTO ATTENDENCES (ATTENDENCE_ID, EMPLOYEE_ID, MONTH, DAYS_PRESENT)
+VALUES (20, 20, 'January', 21);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (1, 1, 'January', 20000);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (2, 2, 'January', 14400);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (3, 3, 'January', 26400);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (4, 4, 'January', 23100);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (5, 5, 'January', 15200);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (6, 6, 'January', 28600);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (7, 7, 'January', 11900);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (8, 8, 'January', 19950);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (9, 9, 'January', 25000);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (10, 10, 'January', 16660);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (11, 11, 'January', 12300);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (12, 12, 'January', 22680);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (13, 13, 'January', 30800);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (14, 14, 'January', 17460);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (15, 15, 'January', 14080);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (16, 16, 'January', 22400);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (17, 17, 'January', 29700);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (18, 18, 'January', 18810);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (19, 19, 'January', 12040);
+
+INSERT INTO SALARY (SALARY_ID, EMPLOYEE_ID, MONTH, TOTAL_SALARY)
+VALUES (20, 20, 'January', 24150);
+
+SELECT * FROM EMPLOYEES;
+SELECT *FROM EMPLOYEES WHERE DEPARTMENT='IT';
+SELECT 
+    E.employee_id,
+    E.name,
+    E.department,
+    A.MONTH,
+    A.DAYS_PRESENT
+FROM EMPLOYEES E
+JOIN ATTENDENCES A
+    ON E.employee_id = A.EMPLOYEE_ID;
+    SELECT 
+    E.employee_id,
+    E.name,
+    E.department,
+    A.DAYS_PRESENT
+FROM EMPLOYEES E
+JOIN ATTENDENCES A
+    ON E.employee_id = A.EMPLOYEE_ID
+WHERE A.DAYS_PRESENT < 15;
+SELECT 
+    E.employee_id,
+    E.name,
+    E.department,
+    A.DAYS_PRESENT
+FROM EMPLOYEES E
+JOIN ATTENDENCES A
+    ON E.employee_id = A.EMPLOYEE_ID
+WHERE A.DAYS_PRESENT = 22;
+
+SELECT E.EMPLOYEE_ID,E.NAME,E.DEPARTMENT,E.SALARY_PER_DAY,S.MONTH,S.TOTAL_SALARY FROM EMPLOYEES E JOIN SALARY S ON E.EMPLOYEE_ID=S.EMPLOYEE_ID;
+SELECT E.EMPLOYEE_ID,E.NAME,E.DEPARTMENT,S.TOTAL_SALARY FROM  EMPLOYEES E JOIN SALARY S ON E.EMPLOYEE_ID=S.EMPLOYEE_ID ORDER BY S.TOTAL_SALARY DESC LIMIT 5;
+SELECT E.DEPARTMENT  ,AVG(S.TOTAL_SALARY)  AS avg_salary  FROM EMPLOYEES E JOIN SALARY S ON E.EMPLOYEE_ID=S.EMPLOYEE_ID GROUP BY E.DEPARTMENT;
+SELECT 
+    SUM(total_salary) AS total_payroll_cost
+FROM SALARY
+WHERE MONTH = 'January';
+SELECT 
+    E.department,
+    SUM(S.total_salary) AS department_payroll
+FROM EMPLOYEES E
+JOIN SALARY S
+    ON E.employee_id = S.employee_id
+GROUP BY E.department;
+SELECT 
+    E.department,
+    SUM(S.total_salary) AS department_payroll
+FROM EMPLOYEES E
+JOIN SALARY S
+    ON E.employee_id = S.employee_id
+GROUP BY E.department
+HAVING SUM(S.total_salary) > 80000;
+SELECT 
+    E.employee_id,
+    E.name,
+    E.department,
+    S.total_salary
+FROM EMPLOYEES E
+JOIN SALARY S
+    ON E.employee_id = S.employee_id
+WHERE S.total_salary > (
+    SELECT AVG(total_salary)
+    FROM SALARY
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
